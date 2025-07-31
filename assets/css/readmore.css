@@ -1,0 +1,33 @@
+.rmsc-readmore-wrap {
+    margin-bottom: 20px;
+}
+
+.rmsc-readmore-content {
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: height 0.4s ease, opacity 0.25s ease;
+    will-change: height, opacity;
+}
+
+.rmsc-active .rmsc-readmore-content {
+    opacity: 1;
+}
+
+.rmsc-readmore-btn {
+    margin-top: 10px;
+    cursor: pointer;
+    background: #337ab7;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: background 0.2s;
+}
+
+.rmsc-readmore-btn:hover,
+.rmsc-readmore-btn:focus {
+    background: #23517a;
+    outline: none;
+}
