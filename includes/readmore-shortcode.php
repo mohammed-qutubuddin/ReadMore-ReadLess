@@ -35,7 +35,7 @@ add_shortcode('readmore', 'my_readmore_shortcode');
 // Enqueue scripts and styles
 function my_readmore_scripts() {
     $dir = plugin_dir_url(dirname(__FILE__));
-    wp_enqueue_script('rmsc-readmore', $dir . 'assets/js/readmore.js', [], null, true);
-    wp_enqueue_style('rmsc-readmore', $dir . 'assets/css/readmore.css');
+    wp_enqueue_script('rmsc-readmore', $dir . 'assets/js/readmore.js', [], '1.0.0', true);
+    wp_enqueue_style('rmsc-readmore', $dir . 'assets/css/readmore.css', [], '1.0.0');
 }
 add_action('wp_enqueue_scripts', 'my_readmore_scripts');

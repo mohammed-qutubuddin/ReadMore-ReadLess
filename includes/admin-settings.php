@@ -12,12 +12,23 @@ add_action('admin_menu', function() {
 
 // Settings Register
 add_action('admin_init', function() {
-    register_setting('readmore_settings_group', 'readmore_button_color');
-    register_setting('readmore_settings_group', 'readmore_button_font_color'); 
-    register_setting('readmore_settings_group', 'readmore_more_text');
-    register_setting('readmore_settings_group', 'readmore_less_text');
-    register_setting('readmore_settings_group', 'readmore_font_size');
-});
+    register_setting('readmore_settings_group', 'readmore_button_color', [
+    'sanitize_callback' => 'sanitize_hex_color',
+    ]);
+    register_setting('readmore_settings_group', 'readmore_button_font_color', [
+        'sanitize_callback' => 'sanitize_hex_color',
+    ]);
+    register_setting('readmore_settings_group', 'readmore_more_text', [
+        'sanitize_callback' => 'sanitize_text_field',
+    ]);
+    register_setting('readmore_settings_group', 'readmore_less_text', [
+        'sanitize_callback' => 'sanitize_text_field',
+    ]);
+    register_setting('readmore_settings_group', 'readmore_font_size', [
+        'sanitize_callback' => 'absint',
+    ]);
+
+    });
 
 function my_readmore_settings_page() {
     ?>
