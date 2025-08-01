@@ -40,7 +40,7 @@ Clear your browser cache or re-save plugin settings. Also ensure you’re editin
 
 == Screenshots ==
 1. Plugins Settings Page Dashboard.
-2. Maintenance mode frontend (with counters).
+2. Front-end
 
 == Changelog ==
 
